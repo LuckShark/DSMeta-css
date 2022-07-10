@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSMeta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header> <!--tem um significado semântico, é o cabeçalho-->
+        <div class="dsmeta-logo-container"> <!--mais geral, se refere a uma divisão genérica-->
+            <img src="logo.svg" alt="DSMeta logo">
+            <h1>DSMeta</h1>
+            <p>Desenvolvido por <a href="https://www.instagram.com/front.shark/">@front.shark</a></p>
+        </div>
+    </header>
+    <!-- Depois da tag header vc usa a tag main, que é o conteúdo abaixo do cabeçalho-->
+    <!-- a tag main geralmente é composta de sections e divs-->
+    <main>
+        <section id="sales">
+            <div class="dsmeta-container"> <!--essa div vai controlar a largura máxima-->
+                <div class="dsmeta-card">
+                    <h2 class="dsmeta-sales-title">Vendas</h2>
+                    <div> <!--essa div vai ser para delimitar a área das caixas-->
+                        <div class="dsmeta-form-control-container">
+                            <input class="dsmeta-form-control" type="text">
+                        </div>
+                        <div class="dsmeta-form-control-container">
+                            <input class="dsmeta-form-control" type="text">
+                        </div>
+                    </div>
+                    <div> <!--div para delimitar a tabela-->
+                        <table class="dsmeta-sales-table">
+                            <thead>
+                                <tr>
+                                    <!--coloquei uma classe em quem precisa sumir com 576px ou 992px-->
+                                    <th class="show992">ID</th>
+                                    <th class="show576">Data</th> 
+                                    <th>Vendendor</th>
+                                    <th class="show992">Visitas</th>
+                                    <th class="show992">Vendas</th>
+                                    <th>Total</th>
+                                    <th>Notificar</th>
+                                </tr>
+                    <!--no Thead, os elementos são th
+                    no Tbody, os elementos são td-->
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="show992">#341</td>
+                                    <td class="show576">08/07/2022</td>
+                                    <td>Anakin</td>
+                                    <td class="show992">15</td>
+                                    <td class="show992">11</td>
+                                    <td>R$ 55300.00</td>
+                                    <td>
+                                        <div class="dsmeta-red-btn-container"> <!--esse é o botão-->
+                                            <div class="dsmeta-red-btn"> <!--esse é só para conter a imagem-->
+                                                <img src="Vector.svg" alt="Notificar">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="show992">#341</td>
+                                    <td class="show576">08/07/2022</td>
+                                    <td>Anakin</td>
+                                    <td class="show992">15</td>
+                                    <td class="show992">11</td>
+                                    <td>R$ 55300.00</td>
+                                    <td>
+                                        <div class="dsmeta-red-btn-container"> <!--esse é o botão-->
+                                            <div class="dsmeta-red-btn"> <!--esse é só para conter a imagem-->
+                                                <img src="Vector.svg" alt="Notificar">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="show992">#341</td>
+                                    <td class="show576">08/07/2022</td>
+                                    <td>Anakin</td>
+                                    <td class="show992">15</td>
+                                    <td class="show992">11</td>
+                                    <td>R$ 55300.00</td>
+                                    <td>
+                                        <div class="dsmeta-red-btn-container"> <!--esse é o botão-->
+                                            <div class="dsmeta-red-btn"> <!--esse é só para conter a imagem-->
+                                                <img src="Vector.svg" alt="Notificar">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<!--
+    INFORMAÇÕES
+    qual a lógica de colocar um nome grande? ex: div-logo-container
+    a lógica é ser auto explicativo para todos: a área que contém o logo
+-->

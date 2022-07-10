@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    /*Essas debaixo são tipo um padrão, tirando margens e espaçamento*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #000;
+    color: #fff;
+}
+
+a, a:hover, a:visited {
+    color: unset; /*pra não ter mudança de cor depois de clicar*/
+    text-decoration: none; /*pra não aparecer o sublinhado*/
+}
+
+header {
+    height: 220px;
+    background: linear-gradient(180deg, #102347 0%, #181818 100%);
+    /*até agora, os elementos estavam alinhados com o topo*/
+    display: flex;
+    align-items: center;
+    justify-content: center; /*agora sim, tudo alinhado ao centro*/
+}
+
+.dsmeta-logo-container {
+    display: flex; /*muda o alinhamento dos itens*/
+    flex-direction: column; /*para ficar um embaixo do outro*/
+    align-items: center;
+}
+
+.dsmeta-logo-container img{
+    width: 235px;
+}
+
+.dsmeta-logo-container h1 { /*colocando os espaços*/
+    margin-top: 15px;
+    font-size: 24px;
+    /*já está em negrito, não preciso mudar o font-weight*/
+}
+
+.dsmeta-logo-container p {
+    font-size: 14px;
+    font-weight: 300; /*esse eu tive que ajeitar, é um estilo mais fino*/
+}
+
+.dsmeta-container {
+    width: 100%;
+    max-width: 900px;/*quando ficar menor que 900, ele ocupará 100%*/
+    margin: 0 auto; /*M.A.C.E.T.E pra alinhar a div ao CENTRO*/
+}
+
+.dsmeta-card {
+    background-color: #283142;
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+
+#sales {
+    padding: 40px 10px;
+}
+
+.dsmeta-sales-title {
+    color: #676FFF;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dsmeta-form-control-container {
+    margin-bottom: 16px;
+    /*isso foi uma boa prática de programação. Não coloquei a margem nos inputs por que em algum momento posso querer remover eles de lá, e aí teria que mudar a margem de novo*/
+    max-width: 300px;
+}
+
+.dsmeta-form-control {
+    width: 100%;
+    height: 46px;
+    background-color: #1B2531;
+    border: 1px solid #384459;
+    border-radius: 5px;
+    color: #9AAABE;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.dsmeta-sales-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse; /*foi para aparecer as lihas da tabela*/
+}
+
+.dsmeta-sales-table thead {
+    height: 55px;
+    font-size: 16px;
+    color: #E9E9E9;
+    font-weight: 700;
+}
+
+.dsmeta-sales-table tbody {
+    font-size: 14px;
+    font-weight: 400;
+    color: #CFCFCF;
+    text-align: center
+}
+
+.dsmeta-sales-table tbody tr {
+    height: 74px;
+    border-top: 1px solid #5F6E82;
+}
+
+
+.dsmeta-sales-table tbody tr:hover > td { /*esse > td só de passar em um elemento da linha o hover funciona*/
+    background-color: #384459;
+}
+
+/*esse comando agora vai ser por que as linhas ímpares tem uma cor diferente*/
+/*ODD pega os elementos ímpares*/
+.dsmeta-sales-table tbody tr:nth-child(odd) {
+    background-color: #242C3B;
+}
+
+.dsmeta-red-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dsmeta-red-btn {
+    height: 45px;
+    width: 45px;
+    background-color: rgba(255, 107, 114, 0.1);
+    border: 1px solid #FF6B72;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /*passa o mouse e vira ponteiro*/
+}
+
+.dsmeta-red-btn img {
+    width: 19px;
+}
+/*escondendo a data quando o tamanho for menor que 576px*/
+/*e vou add outras alterações*/
+.show576 {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .show576 {
+        display: table-cell; /*é o display normal de um elemento de tabela*/
+    } 
+
+    .dsmeta-card {
+        padding: 35px;
+    }
+
+    .dsmeta-sales-table tbody tr {
+        height: 55px;
+    }
+
+    .dsmeta-sales-table tbody {
+        font-size: 18px;
+    }
+
+}
+/*e agora o do 992px*/
+.show992 {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .show992 {
+        display: table-cell;
+    }
+}
